@@ -9,11 +9,11 @@
  * Return: the number of characters printed.
 **/
 
-int loc_por(const char list,int lent){
+int loc_por(const char *list,int lent){
 int j = 0;
 while (j <= lent)
 {
-if (list[j] == "%")
+if (list[j] == '%')
 return (j);
 j++;
 }
