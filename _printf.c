@@ -1,46 +1,61 @@
-#include "main.h"
 #include <stdarg.h>
-#include <stddef.h>
 #include <unistd.h>
-#include <stdio.h>
+#include "main.h"
 /**
  * _printf - function that produces output according to a format
  * @format: format.
  * Return: the number of characters printed.
-**/
-
-int loc_por(const char *list,int lent,int start){
-int j = start;
-while (j <= lent)
-{
-if (list[j] == '%')
-return (j);
-j++;
-}
-return (-1);
-}
-
+ **/
 int _printf(const char *format, ...)
 {
-va_list p_list;
-int i = 0;
-int len;
-int tst;
-if (format == NULL)
-return (-1);
-va_start(p_list, format);
-while (format != NULL && format[i] != '\0')
-i++;
-len = i;
-i = 0;
-/**if (format)
-{
-write(1,&format[i], len);
-}**/
-tst = loc_por(format ,len, 9);
-printf("%d \n",tst);
+int i;
+int j;
+int count = 0;
+char *s;
+char c;
+va_list args;
+va_start(args,format);
 
-va_end(p_list);
-return (0);
+for (i = 0; format[i] != '\0'; i++)
+{
+if (format[i] != '%')
+{
+write(1,&format[i], 1);
+count++;
 }
+else{
+i++;
+switch (format[i])
+{
+case 'c':
+{
+c = va_arg(args,int);
+write(1,&c, 1);
+count++;
+break;
+}
+case 's':
+{
+s = va_arg(args,char *);
+for (j = 0; s[j] != '\0'; j++)
+{
+write(1,&s[j], 1);
+}
+count++;
+
+break;
+}
+case '%':
+{
+write(1,"%", 1);
+count++;
+break;
+}
+}
+}
+}
+va_end(args);
+return count;
+}
+
 

@@ -9,7 +9,6 @@
  */
 int main(void)
 {
-_printf("Let's try to printf a simple sentence.\n");
-_printf("Length:[%d, %i]\n");
+_printf("my name is : % % \n","KARRACH", 'A');
 return (0);
 }
