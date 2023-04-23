@@ -22,10 +22,7 @@ len = i;
 i = 0;
 if (format)
 {
-while (format[i]){
-write(1,&format[i], 1);
-i++;
-}
+write(1,&format[i], len);
 }
 va_end(p_list);
 return (0);
