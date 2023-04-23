@@ -9,15 +9,15 @@
  * Return: the number of characters printed.
 **/
 
-int loc_por(char *list,int lent){
-int j=0;
+int loc_por(const char list,int lent){
+int j = 0;
 while (j <= lent)
 {
 if (list[j] == "%")
-retun j;
-i++;
+return (j);
+j++;
 }
-
+return (-1);
 }
 
 int _printf(const char *format, ...)
@@ -37,7 +37,7 @@ i = 0;
 {
 write(1,&format[i], len);
 }**/
-tst = loc_por(format ,len);
+tst = loc_por(&format ,len);
 printf("%d",tst);
 
 va_end(p_list);
