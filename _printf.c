@@ -2,17 +2,30 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <unistd.h>
-
+#include <stdio.h>
 /**
  * _printf - function that produces output according to a format
  * @format: format.
  * Return: the number of characters printed.
 **/
+
+int loc_por(char *list,int lent){
+int j=0;
+while (j <= lent)
+{
+if (list[j] == "%")
+retun j;
+i++;
+}
+
+}
+
 int _printf(const char *format, ...)
 {
 va_list p_list;
 int i = 0;
 int len;
+int tst;
 if (format == NULL)
 return (-1);
 va_start(p_list, format);
@@ -20,10 +33,13 @@ while (format != NULL && format[i] != '\0')
 i++;
 len = i;
 i = 0;
-if (format)
+/**if (format)
 {
 write(1,&format[i], len);
-}
+}**/
+tst = loc_por(format ,len);
+printf("%d",tst);
+
 va_end(p_list);
 return (0);
 }
