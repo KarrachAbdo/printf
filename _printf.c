@@ -28,6 +28,8 @@ switch (format[i])
 {
 case 'c':{
 c = va_arg(args, int);
+if (c == 0)
+c = 0;
 write(1, &c, 1);
 count++;
 break; }
