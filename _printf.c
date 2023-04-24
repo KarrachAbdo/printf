@@ -8,54 +8,41 @@
  **/
 int _printf(const char *format, ...)
 {
-int i;
-int j;
-int count = 0;
-char *s;
-char c;
+int i, j, count = 0;
+char c, *s;
 va_list args;
-va_start(args,format);
-
+va_start(args, format);
 for (i = 0; format[i] != '\0'; i++)
 {
 if (format[i] != '%')
 {
-write(1,&format[i], 1);
+write(1, &format[i], 1);
 count++;
 }
-else{
+else
+{
 i++;
 switch (format[i])
 {
 case 'c':
 {
-c = va_arg(args,int);
-write(1,&c, 1);
+c = va_arg(args, int);
+write(1, &c, 1);
 count++;
-break;
-}
+break; }
 case 's':
 {
-s = va_arg(args,char *);
+s = va_arg(args, char *);
 for (j = 0; s[j] != '\0'; j++)
 {
-write(1,&s[j], 1);
-}
-count++;
-
-break;
-}
+write(1, &s[j], 1);
+count++; }
+break; }
 case '%':
 {
-write(1,"%", 1);
+write(1, "%", 1);
 count++;
 break;
-}
-}
-}
-}
+}}}}
 va_end(args);
-return count;
-}
-
-
+return (count); }
