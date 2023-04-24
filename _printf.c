@@ -16,8 +16,7 @@ for (i = 0; format[i] != '\0'; i++)
 {
 if (format[i] != '%')
 {
-write(1, &format[i], 1);
-count++;
+count += print_char(format[i]);
 }
 else
 {
@@ -35,6 +34,10 @@ count += print_string(s);
 break; }
 case '%':{
 count += print_char('%');
+break; }
+default:{
+count += print_char('%');
+count += print_char(format[i]);
 break; }}}}
 va_end(args);
 return (count); }
