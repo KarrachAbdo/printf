@@ -8,6 +8,11 @@
  */
 int main(void)
 {
-    _printf("My name is %c\n",98);
+    _printf("Let's try to printf a simple sentence.\n");
+     printf("Let's try to printf a simple sentence.\n");
+     _printf("Character:[%c]\n", 'H');
+     printf("Character:[%c]\n", 'H');
+     printf("%d \n ",_printf("String:[%s]\n", "1"));
+     _printf("String:[%]\n");
     return (0);
 }
