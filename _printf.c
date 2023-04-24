@@ -37,7 +37,6 @@ for (j = 0; s[j] != '\0'; j++)
 {
 write(1, &s[j], 1);
 count++; }
-count--;
 break; }
 case '%':{
 write(1, "%", 1);
