@@ -11,6 +11,8 @@ int _printf(const char *format, ...)
 int i, j, count = 0;
 char c, *s;
 va_list args;
+if (format == NULL)
+return (count);
 va_start(args, format);
 for (i = 0; format[i] != '\0'; i++)
 {
