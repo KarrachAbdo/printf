@@ -14,9 +14,9 @@ va_list args;
 if (format == NULL)
 return (-1);
 va_start(args, format);
-for (i = 0; format && format[i] != '\0; i++)
+for (i = 0; format[i] != '\0'; i++)
 {
-if (format && format[i] != '\0)
+if (format && format[i] != '\0')
 {
 write(1, &format[i], 1);
 count++;
