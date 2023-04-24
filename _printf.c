@@ -42,7 +42,7 @@ count++; }
 break; }
 case '%':
 {
-write(1, "%", 1);
+write(1, "%%", 1);
 count++;
 break;
 }}}}
