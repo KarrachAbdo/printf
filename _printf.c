@@ -12,11 +12,11 @@ int i, j, count = 0;
 char c, *s;
 va_list args;
 if (format == NULL)
-return (count);
+return (-1);
 va_start(args, format);
 for (i = 0; format[i] != '\0'; i++)
 {
-if (format[i] != '%')
+if (format && format[i] != '\0)
 {
 write(1, &format[i], 1);
 count++;
@@ -42,7 +42,7 @@ count++; }
 break; }
 case '%':
 {
-write(1, "%%", 1);
+write(1, "%", 1);
 count++;
 break;
 }}}}

@@ -8,6 +8,6 @@
  */
 int main(void)
 {
-    _printf("My name is %s\n");
+    _printf("My name is %c\n",98);
     return (0);
 }
