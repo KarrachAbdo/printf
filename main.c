@@ -12,7 +12,7 @@ int main(void)
      printf("Let's try to printf a simple sentence.\n");
      _printf("Character:[%c]\n", 'H');
      printf("Character:[%c]\n", 'H');
-     printf("%d \n ",_printf("String:[%s]\n", "1"));
-     _printf("String:[%]\n");
+     printf("%d \n ",_printf("String:[%]\n", "1"));
+     _printf("String:[%%]\n");
     return (0);
 }

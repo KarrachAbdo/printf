@@ -32,7 +32,9 @@ break; }
 case 's':{
 s = va_arg(args, char *);
 if (s == NULL)
+{
 s = "(null)";
+return (-1); }
 for (j = 0; s[j] != '\0'; j++)
 {
 write(1, &s[j], 1);
