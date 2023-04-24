@@ -47,4 +47,4 @@ count++;
 break;
 }}}}
 va_end(args);
-return (count); }
+return (count - 1); }

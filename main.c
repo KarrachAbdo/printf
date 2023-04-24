@@ -9,6 +9,8 @@
  */
 int main(void)
 {
-_printf("my name is : %s %c \n","KARRACH", 'A');
+int a;
+a=_printf("mynameis:%s%c\n","KARRACH", 'A');
+printf("%d",a);
 return (0);
 }
