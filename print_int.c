@@ -6,7 +6,7 @@
  */
 int print_int(int n)
 {
-int count = 0; 
+int count = 0;
 if (n < 0)
 {
 count += print_char('-');
