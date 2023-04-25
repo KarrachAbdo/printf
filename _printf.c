@@ -25,7 +25,7 @@ j = va_arg(args, int);
 if (j > 0)
 count += print_char(j);
 if (j < 0)
-count += print_string("%c");
+count += print_string("(null)");
 break;
 case 's':{
 s = va_arg(args, char *);
