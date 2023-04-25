@@ -11,9 +11,11 @@ int main()
 	printf("----------------------\n");
 	printf("---> STRING CASES <---\n");
 	printf("----------------------\n");
-	len_1 = printf("Expected output:    %s\n", "Morocco");
-	len_2 = _printf("Current output:     %s\n", "Morocco");
-	_printf("Expected length:    [%d]\n", 0);
+	len_1 = _printf("s%s\n");
+	len_1 = _printf("%cc\n");
+	len_2 = _printf("Current output:     %s\n");
+	len_2 = _printf("Current output:     %c\n");
+	_printf("Expected length:    [%d]\n", -23);
 	printf("Current length:     [%d]\n", len_2);
 	len_1 = printf("Expected output:    %s$\n", "");
 	len_2 = _printf("Current output:     %s$\n", "");
@@ -26,7 +28,7 @@ int main()
 	/*len_1 = _printf("Expected output:    %s\n", "hello, world");*/
 	len_2 = _printf("Current output:     %s\n", "hello, world");
 	len_2 = _printf("Expected length: toto    [%c]\n",'H');
-	len_2 = _printf("Expected length: titi    [%c]\n");
+	len_2 = _printf("Expected length: titi    [% ]\n");
 	printf("Expected length:    [%d]\n", len_1);
 	printf("Current length:     [%d]\n", len_2);
 
@@ -34,4 +36,4 @@ int main()
 	
 
 	return (0);
-}
+} 
