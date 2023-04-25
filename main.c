@@ -19,13 +19,13 @@ int main()
 	len_2 = _printf("Current output:     %s$\n", "");
 	printf("Expected length:    [%d]\n", len_1);
 	printf("Current length:     [%d]\n", len_2);
-	len_1 = _printf("Expected output:    %s$\n", NULL);
+	len_1 = _printf("Expected output:    %s\n", "karrach");
 	len_2 = _printf("Current output:     %s$\n", NULL);
 	printf("Expected length:    [%d]\n", len_1);
 	printf("Current length:     [%d]\n", len_2);
 	/*len_1 = _printf("Expected output:    %s\n", "hello, world");*/
 	len_2 = _printf("Current output:     %s\n", "hello, world");
-	_printf("Expected length:    [%y]\n", len_1);
+	len_2 = _printf("Expected length:    [%] [%s]\n", "ABDO" );
 	printf("Current length:     [%d]\n", len_2);
 	len_1 = printf("Expected output:    %sForLife\n", "Morocco");
 	len_2 = _printf("Current output:     %sForLife\n", "Morocco");

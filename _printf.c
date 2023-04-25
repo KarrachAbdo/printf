@@ -15,16 +15,14 @@ va_start(args, format);
 for (i = 0; format[i] != '\0'; i++)
 {
 if (format[i] != '%')
-{
 count += print_char(format[i]);
-}
 else
 {i++;
 switch (format[i])
 {
-case 'c':{
+case 'c':
 count += print_char(va_arg(args, int));
-break; }
+break;
 case 's':{
 s = va_arg(args, char *);
 if (s == NULL)
@@ -35,11 +33,15 @@ case 'd':
 case 'i':{
 count += print_int(va_arg(args, int));
 break; }
-case '%':{
-count += print_char('%');
-break; }
-default:{
+case '%':
 count += print_string("%");
+break;
+default:{
+if (format[i] != ('c' && 's' && 'd' && 'i' && '%'))
+{
+count += print_string("(error)");
+break; }
+count += print_char('%');
 count += print_char(format[i]);
 break; }}}}
 va_end(args);
