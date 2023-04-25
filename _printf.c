@@ -6,7 +6,7 @@
  **/
 int _printf(const char *format, ...)
 {
-int i, count = 0;
+int i, j, count = 0;
 char *s;
 va_list args;
 if (format == NULL || *format == '\0')
@@ -21,7 +21,11 @@ else
 switch (format[i])
 {
 case 'c':
-count += print_char(va_arg(args, int));
+j = va_arg(args, int);
+if (j > 0)
+count += print_char(j);
+if (j < 0)
+count += print_string("%c");
 break;
 case 's':{
 s = va_arg(args, char *);
