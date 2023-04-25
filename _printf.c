@@ -34,7 +34,7 @@ case 'i':{
 count += print_int(va_arg(args, int));
 break; }
 case '%':
-count += print_string("%");
+count += print_char('%');
 break;
 default:{
 if (format[i] != ('c' && 's' && 'd' && 'i' && '%'))
