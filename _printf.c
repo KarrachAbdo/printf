@@ -40,7 +40,6 @@ break; }
 default:{
 count += print_char('%');
 count += print_char(format[i]);
-return (-1);
 break; }}}}
 va_end(args);
 return (count); }
