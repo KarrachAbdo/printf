@@ -10,7 +10,7 @@
 int print_char(char c)
 {
 if (c < 0)
-return (-1);
+return (-2);
 else
 return (write(1, &c, 1));
 }
