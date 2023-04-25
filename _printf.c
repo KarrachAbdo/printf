@@ -37,7 +37,11 @@ case 'i':{
 count += print_int(va_arg(args, int));
 break; }
 case '%':{
+<<<<<<< HEAD
 count += print_int('%');
+=======
+count += print_char('%');
+>>>>>>> 64ffc567b1ce234c82e73d4f0b99975d4f09354e
 break; }
 default:{
 count += print_char('%');
