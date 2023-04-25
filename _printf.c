@@ -37,7 +37,7 @@ case 'i':{
 count += print_int(va_arg(args, int));
 break; }
 case '%':{
-count += print_char('%');
+count += print_int('%');
 break; }
 default:{
 count += print_char('%');
