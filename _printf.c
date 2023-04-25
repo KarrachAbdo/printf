@@ -39,7 +39,7 @@ break;
 default:{
 if (format[i] != ('c' && 's' && 'd' && 'i' && '%'))
 {
-count += print_string("(error)");
+count += print_string("(null)");
 break; }
 count += print_char('%');
 count += print_char(format[i]);
