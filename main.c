@@ -1,22 +1,39 @@
 #include "main.h"
 #include <stdio.h>
+#include <limits.h>
 
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
- 
-int main(void)
+int main()
 {
-    _printf("Let's try to printf a simple sentence.\n");
-     printf("Let's try to printf a simple sentence.\n");
-     printf("%d",_printf("Character:[%c - %s]\n", 'H'));
-      _printf("Length:[%d, %i]\n", 129, 100);
-       printf("Length:[%d, %i]\n", 12,100 );
-        _printf("Negative:[%d]\n");
-        _printf("Negative:[%d]\n",1234);
-    
-     
-    return (0);
+	int len_1 = 0, len_2 = 0;
+
+	
+	/* ===========> %s <=========== */
+	printf("----------------------\n");
+	printf("---> STRING CASES <---\n");
+	printf("----------------------\n");
+	len_1 = printf("Expected output:    %s\n", "Morocco");
+	len_2 = _printf("Current output:     %s\n", "Morocco");
+	printf("Expected length:    [%d]\n", len_1);
+	printf("Current length:     [%d]\n", len_2);
+	len_1 = printf("Expected output:    %s$\n", "");
+	len_2 = _printf("Current output:     %s$\n", "");
+	printf("Expected length:    [%d]\n", len_1);
+	printf("Current length:     [%d]\n", len_2);
+	len_1 = _printf("Expected output:    %s$\n", NULL);
+	len_2 = _printf("Current output:     %s$\n", NULL);
+	printf("Expected length:    [%d]\n", len_1);
+	printf("Current length:     [%d]\n", len_2);
+	/*len_1 = _printf("Expected output:    %s\n", "hello, world");*/
+	len_2 = _printf("Current output:     %s\n", "hello, world");
+	printf("Expected length:    [%d]\n", len_1);
+	printf("Current length:     [%d]\n", len_2);
+	len_1 = printf("Expected output:    %sForLife\n", "Morocco");
+	len_2 = _printf("Current output:     %sForLife\n", "Morocco");
+	printf("Expected length:    [%d]\n", len_1);
+	printf("Current length:     [%d]\n", len_2);
+
+	/* ===========> % <=========== */
+	
+
+	return (0);
 }

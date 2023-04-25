@@ -40,8 +40,11 @@ case '%':{
 count += print_char('%');
 break; }
 default:{
+if (format[i] != 'c' && format[i] != 's' && format[i] != 'i' && format[i] != 'd' && format[i] != '%')
+return (-1);
+else{
 count += print_char('%');
-count += print_char(format[i]);
+count += print_char(format[i]);}
 break; }}}}
 va_end(args);
 return (count); }
