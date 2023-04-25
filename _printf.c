@@ -19,8 +19,7 @@ if (format[i] != '%')
 count += print_char(format[i]);
 }
 else
-{
-i++;
+{i++;
 switch (format[i])
 {
 case 'c':{
@@ -32,19 +31,15 @@ if (s == NULL)
 s = "(null)";
 count += print_string(s);
 break; }
-case 'd':
-case 'i':{
+case 'd':case 'i':{
 count += print_int(va_arg(args, int));
 break; }
 case '%':{
 count += print_char('%');
 break; }
 default:{
-if (format[i] != 'c' && format[i] != 's' && format[i] != 'i' && format[i] != 'd' && format[i] != '%')
-return (-1);
-else{
 count += print_char('%');
-count += print_char(format[i]);}
+count += print_char(format[i]);
 break; }}}}
 va_end(args);
 return (count); }
