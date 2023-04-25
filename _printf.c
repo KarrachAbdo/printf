@@ -33,7 +33,7 @@ s = "(null)";
 count += print_string(s);
 break; }
 case '%':{
-count += print_char('%');
+count += print_percent('%');
 break; }
 default:{
 count += print_char('%');

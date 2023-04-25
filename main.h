@@ -5,6 +5,7 @@
 #include <string.h>
 int print_char(char c);
 int print_string(const char *str);
+int print_percent(char c);
 int _printf(const char *format, ...);
 
 #endif /* MAIN_H */
