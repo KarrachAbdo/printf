@@ -9,5 +9,8 @@
  */
 int print_char(char c)
 {
-	return (write(1, &c, 1));
+if (c < 0)
+return (-1);
+else
+return (write(1, &c, 1));
 }

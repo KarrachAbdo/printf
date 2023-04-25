@@ -27,8 +27,6 @@ int main()
 	len_2 = _printf("Current output:     %s\n", "hello, world");
 	len_2 = _printf("Expected length: toto    [%c]\n",'H');
 	len_2 = _printf("Expected length: titi    [%c]\n");
-	len_1 = printf("Expected output:    %sForLife\n", "Morocco");
-	len_2 = _printf("Current output:     %sForLife\n", "Morocco");
 	printf("Expected length:    [%d]\n", len_1);
 	printf("Current length:     [%d]\n", len_2);
 
