@@ -13,7 +13,7 @@ int main()
 	printf("----------------------\n");
 	len_1 = printf("Expected output:    %s\n", "Morocco");
 	len_2 = _printf("Current output:     %s\n", "Morocco");
-	printf("Expected length:    [%d]\n", len_1);
+	_printf("Expected length:    [%d]\n", 0);
 	printf("Current length:     [%d]\n", len_2);
 	len_1 = printf("Expected output:    %s$\n", "");
 	len_2 = _printf("Current output:     %s$\n", "");
@@ -25,7 +25,7 @@ int main()
 	printf("Current length:     [%d]\n", len_2);
 	/*len_1 = _printf("Expected output:    %s\n", "hello, world");*/
 	len_2 = _printf("Current output:     %s\n", "hello, world");
-	printf("Expected length:    [%d]\n", len_1);
+	_printf("Expected length:    [%y]\n", len_1);
 	printf("Current length:     [%d]\n", len_2);
 	len_1 = printf("Expected output:    %sForLife\n", "Morocco");
 	len_2 = _printf("Current output:     %sForLife\n", "Morocco");
