@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_string - hgzgh  ghgd dff
- *@str : strg intg
- *Return: back to zero
+ * print_string - fuction that print a string
+ *@str : string
+ *Return: int
  */
 int print_string(const char *str)
 {

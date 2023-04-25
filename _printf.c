@@ -32,6 +32,10 @@ if (s == NULL)
 s = "(null)";
 count += print_string(s);
 break; }
+case 'd':
+case 'i':{
+count += print_int(va_arg(args, int));
+break; }
 case '%':{
 count += print_char('%');
 break; }
