@@ -5,13 +5,12 @@
  * Return: the number of characters printed.
  **/
 int _printf(const char *format, ...)
-{int i, j, count = 0;
+{int i, count = 0;
 char *s;
-va_list args, list;
+va_list args;
 if (format == NULL || *format == '\0')
 return (-1);
 va_start(args, format);
-va_start(list, format);
 for (i = 0; format[i] != '\0'; i++)
 {
 if (format[i] != '%')
