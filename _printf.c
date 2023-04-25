@@ -24,14 +24,9 @@ count += print_char(va_arg(args, int));
 break;
 case 's':{
 s = va_arg(args, char *);
-j = va_arg(list, int);
 if (s == NULL)
-{s = "(null)";
-count += print_string(s); }
-if (j  > 0)
+s = "(null)";
 count += print_string(s);
-if (j < 0)
-count += print_string("%s");
 break; }
 case 'd':
 case 'i':{
