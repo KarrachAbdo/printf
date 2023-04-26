@@ -21,16 +21,16 @@ switch (format[i])
 {case 'c':
 count += print_char(va_arg(args, int));
 break;
-case 's':{
+case 's':
 s = va_arg(args, char *);
 if (s == NULL)
 s = "(null)";
 count += print_string(s);
-break; }
+break;
 case 'd':
-case 'i':{
+case 'i':
 count += print_int(va_arg(args, int));
-break; }
+break;
 case 'b':
 count += print_bin(va_arg(args, int));
 break;
