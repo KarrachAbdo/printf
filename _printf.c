@@ -34,6 +34,9 @@ break; }
 case 'b':
 count += print_bin(va_arg(args, int));
 break;
+case 'o':
+count += print_bin(va_arg(args, int));
+break;
 case '%':
 count += print_char('%');
 break;
