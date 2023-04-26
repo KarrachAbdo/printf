@@ -3,8 +3,8 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <string.h>
-#define UNUSED(x) (void)(x)
-#define BUFF_SIZE 1024
+#include <stdlib.h>
+int print_bin(unsigned int n);
 int print_char(char c);
 int print_string(const char *str);
 int print_int(int a);

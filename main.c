@@ -13,8 +13,8 @@ int main()
 	printf("----------------------\n");
 	len_1 = _printf("s%s\n");
 	len_1 = _printf("%cc\n");
-	len_2 = _printf("Current output:     %s\n");
-	len_2 = _printf("Current output:     %c\n");
+	len_2 = _printf("bin:%b\n", 7);
+	len_2 = _printf("bin len:     %d\n",len_2);
 	_printf("Expected length:    [%d]\n", -23);
 	printf("Current length:     [%d]\n", len_2);
 	len_1 = printf("Expected output:    %s$\n", "");
