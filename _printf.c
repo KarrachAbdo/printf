@@ -39,9 +39,9 @@ break;
 case '%':
 count += print_char('%');
 break;
-default:{
+/*default:
 count += print_char('%');
 count += print_char(format[i]);
-break; }}}}
+break;*/ }}}
 va_end(args);
 return (count); }
