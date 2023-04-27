@@ -16,7 +16,7 @@ int print_string(const char *str)
 
 	while (str[len])
 	{
-		print_char(*str);
+		print_char(str[len]);
 		len++;
 	}
 	return (len);
