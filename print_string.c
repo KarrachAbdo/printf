@@ -9,10 +9,10 @@ int print_string(const char *str)
 int len = 0;
 if (str == NULL)
 return (-1);
-while (*str)
+while (str[len])
 {
-len += print_char(*str);
-str++;
+print_char(*str);
+len++;
 }
 return (len);
 }
