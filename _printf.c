@@ -38,6 +38,8 @@ count += print_bin(va_arg(args, int));
 break;
 case '%':
 count += print_char('%');
-break; }}}
+break;
+default:
+count += print_char(format[i]); }}}
 va_end(args);
 return (count); }
