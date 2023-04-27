@@ -8,9 +8,10 @@ int _printf(const char *format, ...)
 {int i, count = 0;
 char *s;
 va_list args;
-if (format == NULL || *format == '\0')
-return (-1);
 va_start(args, format);
+
+if (!format || !format[0])
+	return (-1);
 for (i = 0; format[i] != '\0'; i++)
 {
 if (format[i] != '%')
