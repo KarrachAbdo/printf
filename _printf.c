@@ -23,8 +23,6 @@ count += print_char(va_arg(args, int));
 break;
 case 's':
 s = va_arg(args, char *);
-if (s == NULL)
-s = "(null)";
 count += print_string(s);
 break;
 case 'd':
