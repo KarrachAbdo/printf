@@ -6,13 +6,15 @@
  */
 int print_string(const char *str)
 {
-int len = 0;
-if (str == NULL)
-return (-1);
-while (str[len])
-{
-print_char(*str);
-len++;
-}
+	int len = 0;
+	
+	if (str == NULL)
+		return (-1);
+	
+	while (str[len])
+	{
+		print_char(*str);
+		len++;
+	}
 return (len);
 }
