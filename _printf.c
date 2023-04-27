@@ -40,6 +40,7 @@ case '%':
 count += print_char('%');
 break;
 default:
+count += print_char('%');
 count += print_char(format[i]); }}}
 va_end(args);
 return (count); }
